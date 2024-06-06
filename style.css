@@ -1,0 +1,48 @@
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.card{
+
+    width: 350px;
+    height: 800px;
+    background-color: burlywood;
+    border-radius: 60px;
+    margin: 50px;
+    transition: 1s;
+
+}
+
+.card:hover {
+
+    width: 350px;
+    height: 800px;
+    background-color: #40E0D0;
+    border-radius: 60px;
+    margin: 50px;
+    transition: 1s;
+
+}
+
+.photo {
+
+    height: 40%;
+    padding: 30px;
+    # padding - это внутренний отступ
+    # Для внешних отступов используется margin
+}
+
+.info {
+    padding: 30px;
+    height: 40%;
+}
+
+img {
+
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}

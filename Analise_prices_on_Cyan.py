@@ -12,8 +12,10 @@ driver.get(url)
 # Ожидание загрузки страницы
 time.sleep(5)  # Лучше использовать WebDriverWait для более надежного ожидания
 
+
+
 # Поиск элементов с ценами (замените селектор на актуальный)
-price_elements = driver.find_elements(By.XPATH, '//span[@data-mark="MainPrice"]/span')
+price_elements = driver.find_elements(By.CSS_SELECTOR, 'span[@data-mark="MainPrice"]/span')
 
 # Извлечение цен
 prices = [price.text for price in price_elements]

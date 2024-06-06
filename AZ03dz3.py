@@ -17,15 +17,10 @@ driver.get(url)
 # Ожидание загрузки страницы
 time.sleep(5)  # Лучше использовать WebDriverWait для более надежного ожидания
 
-
-# Поиск элементов с ценами (замените селектор на актуальный)
-price_elements = driver.find_elements(By.XPATH, '//span[@data-testid="price"]/#text')
-
-# Закрытие веб-драйвера
-driver.quit()
+price_elements = driver.find_elements(By.CSS_SELECTOR, 'span.ui-LD-ZU.KIkOH')
 
 # Извлечение цен
-prices = [price.text for price in price_elements]
+prices = [print(price.text) for price in price_elements]
 
 # Сохранение в CSV файл
 with open('prices_Divans.csv', mode='w', newline='', encoding='utf-8') as file:
@@ -37,5 +32,6 @@ with open('prices_Divans.csv', mode='w', newline='', encoding='utf-8') as file:
         writer.writerow([price])
 
 
-
+# Закрытие веб-драйвера
+driver.quit()
 
